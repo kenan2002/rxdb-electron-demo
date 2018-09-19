@@ -12,6 +12,7 @@
  */
 import { app, BrowserWindow } from 'electron';
 import MenuBuilder from './menu';
+import initDB from './db/initDB';
 
 let mainWindow = null;
 
@@ -59,6 +60,8 @@ app.on('ready', async () => {
   ) {
     await installExtensions();
   }
+
+  await initDB();
 
   mainWindow = new BrowserWindow({
     show: false,

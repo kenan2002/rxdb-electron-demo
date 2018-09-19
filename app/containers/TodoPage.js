@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import RxDB from 'rxdb';
-import adapter from 'pouchdb-adapter-node-websql';
+import memoryAdapter from 'pouchdb-adapter-memory';
+import httpAdapter from 'pouchdb-adapter-http';
+import { itemsSchema } from '../db/schemas';
 
-RxDB.plugin(adapter);
+RxDB.plugin(memoryAdapter);
+RxDB.plugin(httpAdapter);
 
 const LoadingState = {
   INIT: 'init',
@@ -29,9 +32,9 @@ class TodoPage extends Component {
     });
     const db = await RxDB.create({
       name: 'todo',
-      adapter: 'websql',
+      adapter: 'memory',
       password: 'my-password',
-      multiInstance: true
+      multiInstance: false
     });
 
     if (this.unmounted) {
@@ -46,29 +49,25 @@ class TodoPage extends Component {
     });
     await db.collection({
       name: 'items',
-      schema: {
-        title: 'todo item schema',
-        version: 0,
-        description: 'describes a todo item',
-        type: 'object',
-        properties: {
-          text: {
-            type: 'string'
-          }
-        }
-      }
+      schema: itemsSchema
     });
 
     this.setState({
       loadingState: LoadingState.DONE
     });
 
-    db.items.find().$.subscribe(items => {
-      console.log(items);
-      this.setState({
-        todos: items
-      });
+    db.items.sync({
+      remote: 'http://localhost:15115/db/items'
     });
+
+    db.items
+      .find()
+      .sort('_id')
+      .$.subscribe(items => {
+        this.setState({
+          todos: items
+        });
+      });
   }
 
   async componentWillUnmount() {
