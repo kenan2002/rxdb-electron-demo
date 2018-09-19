@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "pouchdb-adapter-http": "^7.0.0",
-    "pouchdb-adapter-memory": "^7.0.0",
+    "pouchdb-adapter-idb": "^7.0.0",
     "pouchdb-adapter-node-websql": "^7.0.0",
     "rxdb": "^8.0.0",
     "rxjs": "^6.3.2"

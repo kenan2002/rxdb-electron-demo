@@ -19,10 +19,10 @@ export default async function initDB() {
     schema: itemsSchema
   });
 
-  const serverState = db.server({
+  db.server({
     path: '/db',
     port: 15115
   });
 
-  console.log(serverState);
+  db.items.$.subscribe(changeEvent => console.log(changeEvent));
 }

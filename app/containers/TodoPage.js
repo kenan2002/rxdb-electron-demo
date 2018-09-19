@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import RxDB from 'rxdb';
-import memoryAdapter from 'pouchdb-adapter-memory';
+import idbAdapter from 'pouchdb-adapter-idb';
 import httpAdapter from 'pouchdb-adapter-http';
 import { itemsSchema } from '../db/schemas';
 
-RxDB.plugin(memoryAdapter);
+RxDB.plugin(idbAdapter);
 RxDB.plugin(httpAdapter);
 
 const LoadingState = {
@@ -32,7 +32,7 @@ class TodoPage extends Component {
     });
     const db = await RxDB.create({
       name: 'todo',
-      adapter: 'memory',
+      adapter: 'idb',
       password: 'my-password',
       multiInstance: false
     });
