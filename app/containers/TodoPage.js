@@ -34,7 +34,8 @@ class TodoPage extends Component {
       name: 'todo',
       adapter: 'idb',
       password: 'my-password',
-      multiInstance: false
+      multiInstance: false,
+      queryChangeDetection: true
     });
 
     if (this.unmounted) {
