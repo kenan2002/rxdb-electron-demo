@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import RxDB from 'rxdb';
 import idbAdapter from 'pouchdb-adapter-idb';
-import httpAdapter from 'pouchdb-adapter-http';
 import { itemsSchema } from '../db/schemas';
 
 RxDB.plugin(idbAdapter);
-RxDB.plugin(httpAdapter);
 
 const LoadingState = {
   INIT: 'init',
@@ -34,7 +32,6 @@ class TodoPage extends Component {
       name: 'todo',
       adapter: 'idb',
       password: 'my-password',
-      multiInstance: false,
       queryChangeDetection: true
     });
 
@@ -55,10 +52,6 @@ class TodoPage extends Component {
 
     this.setState({
       loadingState: LoadingState.DONE
-    });
-
-    db.items.sync({
-      remote: 'http://localhost:15115/db/items'
     });
 
     db.items

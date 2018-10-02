@@ -31,8 +31,7 @@ function filterDepWithoutEntryPoints(dep: string): boolean {
 export default {
   externals: [
     ...Object.keys(externals || {}),
-    ...Object.keys(possibleExternals || {}).filter(filterDepWithoutEntryPoints),
-    'rxdb/plugins/server'
+    ...Object.keys(possibleExternals || {}).filter(filterDepWithoutEntryPoints)
   ],
 
   module: {

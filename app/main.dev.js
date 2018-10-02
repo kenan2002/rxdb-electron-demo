@@ -12,9 +12,9 @@
  */
 import { app, BrowserWindow } from 'electron';
 import MenuBuilder from './menu';
-import initDB from './db/initDB';
 
 let mainWindow = null;
+let hiddenWindow = null;
 
 if (process.env.NODE_ENV === 'production') {
   const sourceMapSupport = require('source-map-support');
@@ -61,8 +61,6 @@ app.on('ready', async () => {
     await installExtensions();
   }
 
-  await initDB();
-
   mainWindow = new BrowserWindow({
     show: false,
     width: 1024,
@@ -91,4 +89,16 @@ app.on('ready', async () => {
 
   const menuBuilder = new MenuBuilder(mainWindow);
   menuBuilder.buildMenu();
+
+  hiddenWindow = new BrowserWindow({
+    show: false
+  });
+  hiddenWindow.loadURL(`file://${__dirname}/hiddenWindow/index.html`);
+
+  if (
+    process.env.NODE_ENV === 'development' ||
+    process.env.DEBUG_PROD === 'true'
+  ) {
+    hiddenWindow.openDevTools();
+  }
 });
