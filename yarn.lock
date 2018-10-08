@@ -85,6 +85,13 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
+"@babel/runtime@7.1.2":
+  version "7.1.2"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.1.2.tgz#81c89935f4647706fc54541145e6b4ecfef4b8e3"
+  integrity sha512-Y3SCjmhSupzFB6wcv1KmmFucH6gDVnI30WjOcicV10ju0cZjak3Jcs67YLIXBrmZYw1xCrVeJPbycFwrqNyxpg==
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@babel/template@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.44.tgz#f8832f4fdcee5d59bf515e595fc5106c529b394f"
@@ -2158,10 +2165,10 @@ braces@^2.3.0, braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-broadcast-channel@2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/broadcast-channel/-/broadcast-channel-2.1.4.tgz#a9210ecf416c2e8308d97101e140d59a08adadc0"
-  integrity sha512-ncr0MryrFvbs8huyOVnz19LRoCEsAuACLJrIy/0N30cVn0kNNMdMDHAWpLfvAzzSnkbNh0NLRT6YtdJC3sVDpw==
+broadcast-channel@2.1.5:
+  version "2.1.5"
+  resolved "https://registry.npmjs.org/broadcast-channel/-/broadcast-channel-2.1.5.tgz#f167f024b0f682ea4feb3de40b5d0468e1fbc4a5"
+  integrity sha512-jy5VFnoxAW2Tk5gr49TcuAlix93iyJb5MKEvCW6Gq/kq2fto9uBH+kt3+7a8/qS6djcfYLkdGaZRRDKbMm/sZg==
   dependencies:
     "@babel/runtime" "7.0.0"
     detect-node "2.0.4"
@@ -11755,13 +11762,13 @@ rx@2.3.24:
   resolved "https://registry.yarnpkg.com/rx/-/rx-2.3.24.tgz#14f950a4217d7e35daa71bbcbe58eff68ea4b2b7"
   integrity sha1-FPlQpCF9fjXapxu8vljv9o6ksrc=
 
-rxdb@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/rxdb/-/rxdb-8.0.1.tgz#6e2ce8c51e03e6c00bfd56b25e53265a165c47d0"
-  integrity sha512-w9XoWih6i/Dm1L3Xm8IHdztbKHaNnbRzQxiDQd/EoE+YD3SXzn1yRK+9BCs5P+XU3T037S7p0LD1OhfUpXGbiA==
+rxdb@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.npmjs.org/rxdb/-/rxdb-8.0.2.tgz#25e04b35695f4ad98aec00b83df17fb3a71f1093"
+  integrity sha512-W86/RFEA3dXPbTnsY+WPKf7plDy0JcmSn5X6/IISydcXWNLgGIQ2LeBcFgTGKvMBa6fed0w3X4EvrGWFFyMqWQ==
   dependencies:
-    "@babel/runtime" "7.0.0"
-    broadcast-channel "2.1.4"
+    "@babel/runtime" "7.1.2"
+    broadcast-channel "2.1.5"
     clone "^2.1.1"
     cors "2.8.4"
     crypto-js "^3.1.8"
@@ -11799,7 +11806,7 @@ rxjs@^6.1.0:
 
 rxjs@^6.3.3:
   version "6.3.3"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.3.3.tgz#3c6a7fa420e844a81390fb1158a9ec614f4bad55"
+  resolved "https://registry.npmjs.org/rxjs/-/rxjs-6.3.3.tgz#3c6a7fa420e844a81390fb1158a9ec614f4bad55"
   integrity sha512-JTWmoY9tWCs7zvIk/CvRjhjGaOd+OVBM987mxFo+OW66cGpdKjZcpmc74ES1sB//7Kl/PAe8+wEakuhG4pcgOw==
   dependencies:
     tslib "^1.9.0"
