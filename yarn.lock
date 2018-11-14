@@ -85,10 +85,10 @@
   dependencies:
     regenerator-runtime "^0.12.0"
 
-"@babel/runtime@7.1.2":
-  version "7.1.2"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.1.2.tgz#81c89935f4647706fc54541145e6b4ecfef4b8e3"
-  integrity sha512-Y3SCjmhSupzFB6wcv1KmmFucH6gDVnI30WjOcicV10ju0cZjak3Jcs67YLIXBrmZYw1xCrVeJPbycFwrqNyxpg==
+"@babel/runtime@7.1.5":
+  version "7.1.5"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.1.5.tgz#4170907641cf1f61508f563ece3725150cc6fe39"
+  integrity sha512-xKnPpXG/pvK1B90JkwwxSGii90rQGKtzcMt2gI5G6+M0REXaq6rOHsGC2ay6/d0Uje7zzvSzjEzfR3ENhFlrfA==
   dependencies:
     regenerator-runtime "^0.12.0"
 
@@ -2079,7 +2079,7 @@ body-parser@1.18.2:
     raw-body "2.3.2"
     type-is "~1.6.15"
 
-body-parser@^1.16.1:
+body-parser@1.18.3, body-parser@^1.16.1:
   version "1.18.3"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.18.3.tgz#5b292198ffdd553b3a0f20ded0592b956955c8b4"
   integrity sha1-WykhmP/dVTs6DyDe0FkrlWlVyLQ=
@@ -2165,18 +2165,18 @@ braces@^2.3.0, braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-broadcast-channel@2.1.5:
-  version "2.1.5"
-  resolved "https://registry.npmjs.org/broadcast-channel/-/broadcast-channel-2.1.5.tgz#f167f024b0f682ea4feb3de40b5d0468e1fbc4a5"
-  integrity sha512-jy5VFnoxAW2Tk5gr49TcuAlix93iyJb5MKEvCW6Gq/kq2fto9uBH+kt3+7a8/qS6djcfYLkdGaZRRDKbMm/sZg==
+broadcast-channel@2.1.8:
+  version "2.1.8"
+  resolved "https://registry.npmjs.org/broadcast-channel/-/broadcast-channel-2.1.8.tgz#af4cfbf417ce8697c4397857d514ac7fde80306a"
+  integrity sha512-WTJNQ9hQRJRJSZ1sxqSpCjrTmfKq5aoNG5I04x55DBW/IJGQwN1iXrdLzM3+GgYV9pI9M5ZSyhj99uJdM569Eg==
   dependencies:
-    "@babel/runtime" "7.0.0"
+    "@babel/runtime" "7.1.5"
     detect-node "2.0.4"
     js-sha3 "0.8.0"
     microseconds "0.1.0"
     nano-time "1.0.0"
     rimraf "2.6.2"
-    unload "2.0.2"
+    unload "2.1.0"
 
 brorand@^1.0.1:
   version "1.1.0"
@@ -3128,10 +3128,10 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-cors@2.8.4:
-  version "2.8.4"
-  resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.4.tgz#2bd381f2eb201020105cd50ea59da63090694686"
-  integrity sha1-K9OB8usgECAQXNUOpZ2mMJBpRoY=
+cors@2.8.5:
+  version "2.8.5"
+  resolved "https://registry.npmjs.org/cors/-/cors-2.8.5.tgz#eac11da51592dd86b9f06f6e7ac293b3df875d29"
+  integrity sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
   dependencies:
     object-assign "^4"
     vary "^1"
@@ -4882,7 +4882,43 @@ express-pouchdb@4.1.0:
     sanitize-filename "^1.6.1"
     uuid "^3.0.1"
 
-express@4.16.3, express@^4.14.1, express@^4.16.2, express@^4.16.3:
+express@4.16.4:
+  version "4.16.4"
+  resolved "https://registry.npmjs.org/express/-/express-4.16.4.tgz#fddef61926109e24c515ea97fd2f1bdbf62df12e"
+  integrity sha512-j12Uuyb4FMrd/qQAm6uCHAkPtO8FDTRJZBDd5D2KOL2eLaz1yUNdUB/NOIyq0iU4q4cFarsUCrnFDPBcnksuOg==
+  dependencies:
+    accepts "~1.3.5"
+    array-flatten "1.1.1"
+    body-parser "1.18.3"
+    content-disposition "0.5.2"
+    content-type "~1.0.4"
+    cookie "0.3.1"
+    cookie-signature "1.0.6"
+    debug "2.6.9"
+    depd "~1.1.2"
+    encodeurl "~1.0.2"
+    escape-html "~1.0.3"
+    etag "~1.8.1"
+    finalhandler "1.1.1"
+    fresh "0.5.2"
+    merge-descriptors "1.0.1"
+    methods "~1.1.2"
+    on-finished "~2.3.0"
+    parseurl "~1.3.2"
+    path-to-regexp "0.1.7"
+    proxy-addr "~2.0.4"
+    qs "6.5.2"
+    range-parser "~1.2.0"
+    safe-buffer "5.1.2"
+    send "0.16.2"
+    serve-static "1.13.2"
+    setprototypeof "1.1.0"
+    statuses "~1.4.0"
+    type-is "~1.6.16"
+    utils-merge "1.0.1"
+    vary "~1.1.2"
+
+express@^4.14.1, express@^4.16.2, express@^4.16.3:
   version "4.16.3"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.3.tgz#6af8a502350db3246ecc4becf6b5a34d22f7ed53"
   integrity sha1-avilAjUNsyRuzEvs9rWjTSL37VM=
@@ -6621,10 +6657,10 @@ is-dotfile@^1.0.0:
   resolved "https://registry.yarnpkg.com/is-dotfile/-/is-dotfile-1.0.3.tgz#a6a2f32ffd2dfb04f5ca25ecd0f6b83cf798a1e1"
   integrity sha1-pqLzL/0t+wT1yiXs0Pa4PPeYoeE=
 
-is-electron@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/is-electron/-/is-electron-2.1.0.tgz#37dd2e9e7167efa8bafce86c0c25762bc4b851fa"
-  integrity sha512-dkg5xT383+M6zIbbXW/z7n2nz4SFUi2OSyhntnFYkRdtV+HVEfdjEK+5AWisfYgkpe3WYjTIuh7toaKmSfFVWw==
+is-electron@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/is-electron/-/is-electron-2.2.0.tgz#8943084f09e8b731b3a7a0298a7b5d56f6b7eef0"
+  integrity sha512-SpMppC2XR3YdxSzczXReBjqs2zGscWQpBIKqwXYBFic0ERaxNVgwLCHwOLZeESfdJQjX0RDvrJ1lBXX2ij+G1Q==
 
 is-empty@^1.2.0:
   version "1.2.0"
@@ -10814,7 +10850,7 @@ property-is-enumerable-x@^1.1.0:
     to-object-x "^1.4.1"
     to-property-key-x "^2.0.1"
 
-proxy-addr@~2.0.3:
+proxy-addr@~2.0.3, proxy-addr@~2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.4.tgz#ecfc733bf22ff8c6f407fa275327b9ab67e48b93"
   integrity sha512-5erio2h9jp5CHGwcybmxmVqHmnCBZeewlfJ0pex+UW7Qny7OOZXTtH56TGNyBizkgiOwhJtMKrVzDTeKcySZwA==
@@ -11762,21 +11798,21 @@ rx@2.3.24:
   resolved "https://registry.yarnpkg.com/rx/-/rx-2.3.24.tgz#14f950a4217d7e35daa71bbcbe58eff68ea4b2b7"
   integrity sha1-FPlQpCF9fjXapxu8vljv9o6ksrc=
 
-rxdb@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.npmjs.org/rxdb/-/rxdb-8.0.2.tgz#25e04b35695f4ad98aec00b83df17fb3a71f1093"
-  integrity sha512-W86/RFEA3dXPbTnsY+WPKf7plDy0JcmSn5X6/IISydcXWNLgGIQ2LeBcFgTGKvMBa6fed0w3X4EvrGWFFyMqWQ==
+rxdb@^8.0.4:
+  version "8.0.4"
+  resolved "https://registry.npmjs.org/rxdb/-/rxdb-8.0.4.tgz#3be2338672f45d6eb8bbb8aaefab7f1515d250f8"
+  integrity sha512-WHGF5zE2l5ppHs+3+D37854GFlgdqDwfSUiN2tdwB2toJmATkFb9u76jgQpiTr7XneNl4/iWuT0aiKezy+r8jw==
   dependencies:
-    "@babel/runtime" "7.1.2"
-    broadcast-channel "2.1.5"
+    "@babel/runtime" "7.1.5"
+    broadcast-channel "2.1.8"
     clone "^2.1.1"
-    cors "2.8.4"
+    cors "2.8.5"
     crypto-js "^3.1.8"
     custom-idle-queue "2.1.2"
     deep-equal "^1.0.1"
-    express "4.16.3"
+    express "4.16.4"
     express-pouchdb "4.1.0"
-    is-electron "2.1.0"
+    is-electron "2.2.0"
     is-my-json-valid "2.19.0"
     modifyjs "0.3.1"
     object-path "0.11.4"
@@ -11787,7 +11823,7 @@ rxdb@^8.0.2:
     pouchdb-selector-core "7.0.0"
     random-token "0.0.8"
     spark-md5 "^3.0.0"
-    unload "2.0.2"
+    unload "2.1.0"
     url "^0.11.0"
 
 rxjs@^5.1.1, rxjs@^5.5.2:
@@ -13403,12 +13439,12 @@ universalify@^0.1.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
 
-unload@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/unload/-/unload-2.0.2.tgz#ec3c8f9a92713d32e29522a125d8f2cb94a95eb3"
-  integrity sha512-l3oHfSHJ+p4BBzt8UkhsffgrhVFJS6HQox5tNwi0KAFBJ07gRmEdYFMrqTB91wulLVo4rRY63SfOH0gLkfG8mA==
+unload@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/unload/-/unload-2.1.0.tgz#24e620607fdf1642de9533e4675682b28bdf8394"
+  integrity sha512-vOg/orTFrHv60iWLZbBpgrgoFaSovkcgQJUmBHNGFWlSFdwtoANZaT3uSePVhggkWSsPxs2rpBl5LHpmcSGjRw==
   dependencies:
-    "@babel/runtime" "7.0.0"
+    "@babel/runtime" "7.1.5"
     detect-node "2.0.4"
 
 unpipe@1.0.0, unpipe@~1.0.0:

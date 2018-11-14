@@ -99,6 +99,8 @@ app.on('ready', async () => {
     process.env.NODE_ENV === 'development' ||
     process.env.DEBUG_PROD === 'true'
   ) {
-    hiddenWindow.openDevTools();
+    hiddenWindow.openDevTools({
+      mode: 'detach'
+    });
   }
 });

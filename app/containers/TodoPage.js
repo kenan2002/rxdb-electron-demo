@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import RxDB from 'rxdb';
-import idbAdapter from 'pouchdb-adapter-idb';
+import RxDB from '../db/rxdb';
 import { itemsSchema } from '../db/schemas';
-
-RxDB.plugin(idbAdapter);
 
 const LoadingState = {
   INIT: 'init',

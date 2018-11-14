@@ -1,8 +1,5 @@
-import RxDB from 'rxdb';
-import adapter from 'pouchdb-adapter-idb';
+import RxDB from '../db/rxdb';
 import { itemsSchema } from '../db/schemas';
-
-RxDB.plugin(adapter);
 
 (async function initDB() {
   const db = await RxDB.create({
